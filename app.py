@@ -28,7 +28,7 @@ def browse_pets():
 @app.route('/pets/<int:pet_id>')
 def show_pet(pet_id):
 
-    pet = Pet.query.all()
+    pet = Pet.query.get_or_404(pet_id)
 
     return render_template('pet.html', pet=pet)
 
