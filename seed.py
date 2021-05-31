@@ -26,6 +26,9 @@ available=1)
 pet4 = Pet(name="Amelia", species="cat", photo_url ="https://cataas.com/cat/60b214cfee9e4c0017545639", 
 age=10, notes="This purrfect creamsicle girl loves playing with her toys, eating SNAX and screaming incessantly. Her favorite time of day is 5AM which is her crazy time- she loves to zoom back and forth and sing operatic arias. Obsessed with birds, screaming. Also, she LOVES belly rubs!", available=0)
 
-db.session.add_all([pet1, pet2, pet3, pet4])
+pet5 = Pet(name="Screamy Ray Vaughan", species="cat", photo_url="https://images2.minutemediacdn.com/image/upload/c_crop,h_1193,w_2120,x_0,y_95/f_auto,q_auto,w_1100/v1554700180/shape/mentalfloss/539787-istock-164188559.jpg",
+age=3, notes="Wait a minute... that's not a cat!", available=1)
+
+db.session.add_all([pet1, pet2, pet3, pet4, pet5])
 db.session.commit()
 

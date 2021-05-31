@@ -28,7 +28,7 @@ class Pet(db.Model):
 
     # how would you handle available? as an bool?
 
-    available = db.Column(db.Boolean)
+    available = db.Column(db.Boolean, default=True)
 
 def connect_db(app):
     '''Connect the db to our app'''

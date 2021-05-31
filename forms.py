@@ -11,3 +11,7 @@ class AddPetForm(FlaskForm):
     photo_url = StringField("Pet Photo (online link)", validators=[InputRequired(), URL()])
     age = IntegerField("Age", validators=[InputRequired()])
     notes = StringField("Pet Bio", validators=[Optional(), Optional()])
+
+class EditPetForm(FlaskForm):
+    '''Form for editing pet info'''
+

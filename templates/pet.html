@@ -4,6 +4,23 @@
 
 <h1>Meet {{ pet.name }}</h1>
 
-<img src="{{ pet.photo_url }}"
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="{{ pet.photo_url }}">
+        </div>
+        <div class="col-6">
+            <p>
+                {{ pet.notes }}
+            </p>
+            <p>
+                Interested in meeting {{ pet.name }}? Send us an <a href="#">email!</a>
+            </p>
+            <a href="/pets/{{ pet.id }}/edit"> 
+                <button type ="button" class="btn btn-primary">Edit {{ pet.name }}'s Info</button>
+            </a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
